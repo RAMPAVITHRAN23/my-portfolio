@@ -216,7 +216,7 @@ a:focus {
 
     .navbar-light .navbar-nav .nav-link:hover,
     .navbar-light .navbar-nav .nav-link.active {
-        color: #111111;
+        color: #fff38b;
     }
 
     .navbar-light.nav-sticky .navbar-nav .nav-link:hover,
@@ -268,16 +268,44 @@ a:focus {
     padding: 0;
 }
 
-.hero .hero-image {
+.hero-image-frame {
     position: relative;
-    text-align: right;
-    padding-right: 75px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Adjust width */
+    height: auto;
+    margin: auto;
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Prevents image overflow */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    backdrop-filter: blur(10px); /* Glass effect */
+    background: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Glass-like border */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.hero .hero-image img {
-    max-width: 80%;
-    max-height: 80%;
+.hero-image-frame img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Prevents distortion */
+    border-radius: 10px; /* Smooth edges */
+    transition: transform 0.3s ease-in-out;
 }
+
+/* Hover Effect */
+.hero-image-frame:hover {
+    transform: scale(1.05); /* Slight zoom */
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.5); /* More visible on hover */
+}
+
+
+
+.hero-image-frame img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+
 
 .hero .hero-content {
     position: relative;
