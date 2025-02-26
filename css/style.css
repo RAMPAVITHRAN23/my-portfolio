@@ -2,9 +2,9 @@
 /********* General CSS *********/
 /*******************************/
 body {
-    color: #797979;
-    background: #ffffff;
-    font-family: 'Montserrat', sans-serif;
+    color: #5a5a5a;
+    background: #f4f8fc;
+    font-family: "Montserrat", sans-serif;
 }
 
 h1,
@@ -13,18 +13,18 @@ h3,
 h4,
 h5,
 h6 {
-    color: #414141;
+    color: #002b5c;
 }
 
 a {
-    color: #313131;
-    transition: .3s;
+    color: #0056b3;
+    transition: 0.3s;
 }
 
 a:hover,
 a:active,
 a:focus {
-    color: #EF233C;
+    color: #ef233c;
     outline: none;
     text-decoration: none;
 }
@@ -46,18 +46,16 @@ a:focus {
     color: #ffffff;
     background: #033a8d;
     border: 2px solid transparent;
-    border-radius: 0;
-    box-shadow: inset 0 0 0 50px #EF233C;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 50px #0056b3;
     transition: ease-out 0.3s;
-    -webkit-transition: ease-out 0.3s;
-    -moz-transition: ease-out 0.3s;
 }
 
 .btn:hover {
-    color: #EF233C;
+    color: #0056b3;
     background: transparent;
-    box-shadow: inset 0 0 0 0 #EF233C;
-    border-color: #EF233C;
+    box-shadow: inset 0 0 0 0 #0056b3;
+    border-color: #0056b3;
 }
 
 #loader {
@@ -69,19 +67,15 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #ffffff;
+    background: #f4f8fc;
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: opacity .3s ease-out, visibility 0s linear .3s;
-    -o-transition: opacity .3s ease-out, visibility 0s linear .3s;
-    transition: opacity .3s ease-out, visibility 0s linear .3s;
+    transition: opacity 0.3s ease-out, visibility 0s linear 0.3s;
     z-index: 999;
 }
 
 #loader.show {
-    -webkit-transition: opacity .6s ease-out, visibility 0s linear 0s;
-    -o-transition: opacity .6s ease-out, visibility 0s linear 0s;
-    transition: opacity .6s ease-out, visibility 0s linear 0s;
+    transition: opacity 0.6s ease-out, visibility 0s linear 0s;
     visibility: visible;
     opacity: 1;
 }
@@ -90,21 +84,10 @@ a:focus {
     position: relative;
     width: 45px;
     height: 45px;
-    border: 5px solid #dddddd;
-    border-top: 5px solid #EF233C;
+    border: 5px solid #b0c4de;
+    border-top: 5px solid #0056b3;
     border-radius: 50%;
-    -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
-
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
 }
 
 @keyframes spin {
@@ -129,23 +112,29 @@ a:focus {
     right: 15px;
     bottom: 15px;
     z-index: 9;
+    background: #0056b3;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .back-to-top i {
     color: #ffffff;
 }
 
-.back-to-top:hover i {
-    color: #414141;
+.back-to-top:hover {
+    background: #033a8d;
 }
 
+.back-to-top:hover i {
+    color: #e0e0e0;
+}
 
 /**********************************/
 /*********** Nav Bar CSS **********/
 /**********************************/
 .navbar {
     position: relative;
-    transition: .5s;
+    transition: 0.5s;
     z-index: 999;
 }
 
@@ -153,7 +142,7 @@ a:focus {
     position: fixed;
     top: 0;
     width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .navbar .navbar-brand {
@@ -162,8 +151,7 @@ a:focus {
     line-height: 0px;
     font-weight: 700;
     letter-spacing: 2px;
-    transition: .5s;
-
+    transition: 0.5s;
 }
 
 .navbar .navbar-brand img {
@@ -184,7 +172,7 @@ a:focus {
         width: 100%;
         padding: 30px 60px;
         background: transparent !important;
-        border-bottom: 1px dashed rgba(256, 256, 256, .2);
+        border-bottom: 1px dashed rgba(256, 256, 256, 0.2);
         z-index: 9;
     }
 
@@ -198,7 +186,7 @@ a:focus {
     }
 
     .navbar.nav-sticky .navbar-brand {
-        color: #EF233C;
+        color: #062a47;
     }
 
     .navbar-light .navbar-nav .nav-link,
@@ -221,7 +209,7 @@ a:focus {
 
     .navbar-light.nav-sticky .navbar-nav .nav-link:hover,
     .navbar-light.nav-sticky .navbar-nav .nav-link.active {
-        color: #EF233C;
+        color: #0270ff;
     }
 }
 
@@ -232,7 +220,7 @@ a:focus {
     }
 
     .navbar .navbar-brand {
-        color: #EF233C;
+        color: #8fabd4;
     }
 
     .navbar .navbar-nav {
@@ -248,7 +236,6 @@ a:focus {
     }
 }
 
-
 /*******************************/
 /********** Hero CSS ***********/
 /*******************************/
@@ -258,7 +245,8 @@ a:focus {
     margin-bottom: 45px;
     padding: 120px 0 0 0;
     overflow: hidden;
-    background: linear-gradient(rgba(10, 25, 47, 0.95), rgba(0, 123, 255, 0.85)), url(../img/hero-bg.jpg);
+    background: linear-gradient(rgba(10, 25, 47, 0.95), rgba(0, 123, 255, 0.85)),
+        url(../img/hero-bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -272,40 +260,48 @@ a:focus {
     position: relative;
     text-align: center;
     width: 100%;
-    max-width: 400px; /* Adjust width */
+    max-width: 400px;
+    /* Adjust width */
     height: auto;
     margin: auto;
-    border-radius: 15px; /* Rounded corners */
-    overflow: hidden; /* Prevents image overflow */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    backdrop-filter: blur(10px); /* Glass effect */
-    background: rgba(255, 255, 255, 0.1); /* Light transparent background */
-    border: 2px solid rgba(255, 255, 255, 0.3); /* Glass-like border */
+    border-radius: 15px;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Prevents image overflow */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
+    backdrop-filter: blur(10px);
+    /* Glass effect */
+    background: rgba(255, 255, 255, 0.1);
+    /* Light transparent background */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    /* Glass-like border */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .hero-image-frame img {
     width: 100%;
     height: auto;
-    object-fit: cover; /* Prevents distortion */
-    border-radius: 10px; /* Smooth edges */
+    object-fit: cover;
+    /* Prevents distortion */
+    border-radius: 10px;
+    /* Smooth edges */
     transition: transform 0.3s ease-in-out;
 }
 
 /* Hover Effect */
 .hero-image-frame:hover {
-    transform: scale(1.05); /* Slight zoom */
+    transform: scale(1.05);
+    /* Slight zoom */
     box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
-    border: 2px solid rgba(255, 255, 255, 0.5); /* More visible on hover */
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    /* More visible on hover */
 }
-
-
 
 .hero-image-frame img:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+    transform: scale(1.05);
+    /* Slight zoom on hover */
 }
-
-
 
 .hero .hero-content {
     position: relative;
@@ -352,7 +348,7 @@ a:focus {
 
 .hero .hero-btn .btn {
     margin-top: 35px;
-    color: #EF233C;
+    color: #5875ac;
     background: #ffffff;
     box-shadow: inset 0 0 0 50px #ffffff;
 }
@@ -448,7 +444,6 @@ a:focus {
     }
 }
 
-
 /*******************************/
 /******* Section Header ********/
 /*******************************/
@@ -477,7 +472,7 @@ a:focus {
     top: 11px;
     right: 0;
     left: -30px;
-    background: #EF233C;
+    background: #b0d4ff;
     z-index: -1;
 }
 
@@ -488,7 +483,7 @@ a:focus {
     height: 3px;
     top: 11px;
     left: 3px;
-    background: #EF233C;
+    background: #ef233c;
     z-index: 1;
 }
 
@@ -505,7 +500,6 @@ a:focus {
     }
 }
 
-
 /*******************************/
 /********** About CSS **********/
 /*******************************/
@@ -513,6 +507,9 @@ a:focus {
     position: relative;
     width: 100%;
     margin: -45px 0 45px 0;
+    background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
+    padding: 60px 0;
+    overflow: hidden;
 }
 
 .about .col-lg-6 {
@@ -521,26 +518,40 @@ a:focus {
 
 .about .section-header {
     margin-bottom: 30px;
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
 }
 
 .about .about-img {
     position: relative;
     height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeInLeft 1s ease-in-out;
 }
 
 .about .about-img img {
-    position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.about .about-img img:hover {
+    transform: scale(1.05);
 }
 
 .about .about-content {
     padding: 0 60px;
+    animation: fadeInRight 1s ease-in-out;
 }
 
 .about .about-text p {
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .about .skills {
@@ -555,7 +566,8 @@ a:focus {
     display: inline-block;
     margin-bottom: 5px;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
+    color: #0056b3;
 }
 
 .about .skill-name p:last-child {
@@ -563,28 +575,101 @@ a:focus {
 }
 
 .about .progress {
-    height: 10px;
+    height: 12px;
     border-radius: 10px;
-    background: #dddddd;
+    background: #e0e0e0;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .about .progress .progress-bar {
     width: 0px;
-    background: #EF233C;
+    background: linear-gradient(90deg, #007bff, #0056b3);
     border-radius: 10px;
-    transition: 2s;
+    transition: width 2s ease-in-out;
 }
 
+/* Button Styling */
 .about .about-text a.btn {
     margin-top: 15px;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px;
+    background: #007bff;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s ease-in-out;
 }
 
+.about .about-text a.btn:hover {
+    background: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive adjustments */
 @media (max-width: 991.98px) {
     .about .about-content {
         padding: 45px 15px 0 15px;
     }
-}
 
+    .about .about-img {
+        text-align: center;
+    }
+
+    .about .about-text p {
+        text-align: center;
+    }
+}
 
 /*******************************/
 /******* Experience CSS ********/
@@ -592,6 +677,9 @@ a:focus {
 .experience {
     position: relative;
     padding: 45px 0 15px 0;
+    background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
+    background-size: cover;
+    min-height: 100vh;
 }
 
 .experience .timeline {
@@ -600,10 +688,10 @@ a:focus {
 }
 
 .experience .timeline::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 2px;
-    background: #EF233C;
+    background: #007bff;
     top: 0;
     bottom: 0;
     left: 50%;
@@ -628,14 +716,14 @@ a:focus {
 }
 
 .experience .timeline .timeline-item::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 16px;
     height: 16px;
     top: 48px;
     right: -8px;
     background: #ffffff;
-    border: 2px solid #EF233C;
+    border: 2px solid #007bff;
     border-radius: 16px;
     z-index: 1;
 }
@@ -645,7 +733,7 @@ a:focus {
 }
 
 .experience .timeline .timeline-item::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 0;
     height: 0;
@@ -653,12 +741,12 @@ a:focus {
     right: 10px;
     z-index: 1;
     border: 10px solid;
-    border-color: transparent transparent transparent #dddddd;
+    border-color: transparent transparent transparent #b0d4ff;
 }
 
 .experience .timeline .timeline-item.right::before {
     left: 10px;
-    border-color: transparent #dddddd transparent transparent;
+    border-color: transparent #b0d4ff transparent transparent;
 }
 
 .experience .timeline .timeline-date {
@@ -667,7 +755,7 @@ a:focus {
     top: 44px;
     font-size: 16px;
     font-weight: 600;
-    color: #EF233C;
+    color: #007bff;
     text-transform: uppercase;
     letter-spacing: 1px;
     z-index: 1;
@@ -687,19 +775,20 @@ a:focus {
     padding: 30px;
     background: #ffffff;
     position: relative;
-    border-right: 5px solid #dddddd;
-    box-shadow: 0 0 60px rgba(0, 0, 0, .08);
+    border-right: 5px solid #b0d4ff;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.08);
 }
 
 .experience .timeline .timeline-item.right .timeline-text {
     border-right: none;
-    border-left: 5px solid #dddddd;
+    border-left: 5px solid #b0d4ff;
 }
 
 .experience .timeline .timeline-text h2 {
     margin: 0 0 5px 0;
     font-size: 22px;
     font-weight: 600;
+    color: #0056b3;
 }
 
 .experience .timeline .timeline-text h4 {
@@ -707,13 +796,16 @@ a:focus {
     font-size: 16px;
     font-style: italic;
     font-weight: 400;
+    color: #007bff;
 }
 
 .experience .timeline .timeline-text p {
     margin: 0;
     font-size: 16px;
+    color: #0056b3;
 }
 
+/* Responsive adjustments */
 @media (max-width: 767.98px) {
     .experience .timeline::after {
         left: 8px;
@@ -741,7 +833,7 @@ a:focus {
     .experience .timeline .timeline-item.left::before,
     .experience .timeline .timeline-item.right::before {
         left: 18px;
-        border-color: transparent #dddddd transparent transparent;
+        border-color: transparent #b0d4ff transparent transparent;
     }
 
     .experience .timeline .timeline-item.left .timeline-date,
@@ -757,10 +849,9 @@ a:focus {
     .experience .timeline .timeline-item.left .timeline-text,
     .experience .timeline .timeline-item.right .timeline-text {
         border-right: none;
-        border-left: 5px solid #dddddd;
+        border-left: 5px solid #b0d4ff;
     }
 }
-
 
 /*******************************/
 /********* Service CSS *********/
@@ -781,7 +872,7 @@ a:focus {
 }
 
 .service .service-item:hover {
-    box-shadow: inset 800px 0 0 0 #EF233C;
+    box-shadow: inset 800px 0 0 0 #194052;
 }
 
 .service .service-icon {
@@ -791,15 +882,15 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #EF233C;
+    border: 1px solid #ffffff;
     background: #ffffff;
 }
 
 .service .service-icon i {
     position: relative;
     font-size: 60px;
-    color: #EF233C;
-    transition: .3s;
+    color: #f77c09;
+    transition: 0.3s;
 }
 
 .service .service-item:hover i {
@@ -841,10 +932,31 @@ a:focus {
     }
 }
 
-
 /*******************************/
 /******** Portfolio CSS ********/
 /*******************************/
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Adds spacing between grid items */
+}
+
+.portfolio-item {
+    padding: 15px;
+    /* Adds padding inside each item */
+}
+
+.portfolio-wrap {
+    background: #fff;
+    /* Ensure a clean background */
+    border-radius: 10px;
+    /* Optional rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for better visibility */
+    overflow: hidden;
+}
+
 .portfolio {
     position: relative;
     padding: 45px 0 15px 0;
@@ -866,10 +978,10 @@ a:focus {
     font-size: 14px;
     font-weight: 600;
     color: #ffffff;
-    background: #EF233C;
+    background: hsl(0, 0%, 100%);
     border: 2px solid transparent;
     border-radius: 0;
-    box-shadow: inset 0 0 0 50px #EF233C;
+    box-shadow: inset 0 0 0 50px #83b0da;
     transition: ease-out 0.3s;
     -webkit-transition: ease-out 0.3s;
     -moz-transition: ease-out 0.3s;
@@ -877,10 +989,10 @@ a:focus {
 
 .portfolio #portfolio-filter li:hover,
 .portfolio #portfolio-filter li.filter-active {
-    color: #EF233C;
+    color: #ef233c;
     background: transparent;
-    box-shadow: inset 0 0 0 0 #EF233C;
-    border-color: #EF233C;
+    box-shadow: inset 0 0 0 0 #ef233c;
+    border-color: #d1cece;
 }
 
 .portfolio .portfolio-item {
@@ -903,7 +1015,7 @@ a:focus {
     height: 100%;
     object-fit: cover;
     transform: scale(1.1);
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .portfolio .portfolio-item:hover img {
@@ -918,7 +1030,7 @@ a:focus {
     display: flex;
     align-items: center;
     background: #ffffff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .12);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio .portfolio-text h3 {
@@ -942,12 +1054,11 @@ a:focus {
 }
 
 .portfolio .portfolio-item:hover a.btn {
-    color: #aa2232;
+    color: #ff7b00;
     background: transparent;
-    box-shadow: inset 0 0 0 0 #EF233C;
-    border-color: #EF233C;
+    box-shadow: inset 0 0 0 0 #B0D4FF;
+    border-color: #717de4;
 }
-
 
 /*******************************/
 /********* Banner CSS **********/
@@ -957,172 +1068,7 @@ a:focus {
     width: 100%;
     margin: 45px 0;
     padding: 90px 0;
-    background: #EF233C;
-}
-
-.banner .container {
-    max-width: 750px;
-    text-align: center;
-}
-
-.banner .section-header {
-    margin-bottom: 20px;
-}
-
-.banner .section-header p {
-    color: #414141;
-    background: transparent;
-}
-
-.banner .section-header p::after {
-    display: none;
-}
-
-.banner .section-header h2 {
-    color: #ffffff;
-}
-
-.banner .section-header h2 span {
-    color: #414141;
-    font-size: 50px;
-}
-
-.banner .banner-text p {
-    font-size: 18px;
-    color: #ffffff;
-}
-
-.banner .banner-text .btn {
-    margin-top: 15px;
-    color: #EF233C;
-    background: #ffffff;
-    box-shadow: inset 0 0 0 50px #ffffff;
-}
-
-.banner .banner-text .btn:hover {
-    color: #ffffff;
-    background: transparent;
-    box-shadow: inset 0 0 0 0 #ffffff;
-    border-color: #ffffff;
-}
-
-
-/*******************************/
-/********* Pricing CSS *********/
-/*******************************/
-.price {
-    position: relative;
-    width: 100%;
-    padding: 45px 0 15px 0;
-}
-
-.price .row {
-    padding: 0 15px;
-}
-
-.price .col-md-4 {
-    padding: 0;
-}
-
-.price .price-item {
-    position: relative;
-    margin-bottom: 30px;
-    background: #ffffff;
-}
-
-.price .featured-item {
-    box-shadow: 0 0 30px rgba(0, 0, 0, .2);
-    z-index: 1;
-}
-
-.price .price-header,
-.price .price-body,
-.price .price-footer {
-    position: relative;
-    text-align: center;
-}
-
-.price .price-header {
-    padding: 45px 0 30px 0;
-    color: #414141;
-}
-
-.price .price-item.featured-item .price-header {
-    color: #EF233C;
-}
-
-.price .price-title h2 {
-    font-size: 25px;
-    font-weight: 400;
-    text-transform: uppercase;
-}
-
-.price .price-prices h2 {
-    font-size: 45px;
-    font-weight: 700;
-    margin-left: 10px;
-}
-
-.price .price-prices h2 small {
-    position: absolute;
-    font-size: 18px;
-    font-weight: 400;
-    margin-top: 9px;
-    margin-left: -12px;
-}
-
-.price .price-prices h2 span {
-    margin-left: 1px;
-    font-size: 18px;
-    font-weight: 400;
-}
-
-.price .price-item.featured-item h2 {
-    color: #EF233C;
-}
-
-.price .price-body {
-    padding: 0 0 20px 0;
-}
-
-.price .price-description ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.price .price-description ul li {
-    padding: 0 0 20px 0;
-}
-
-.price .price-item .price-action {
-    padding-bottom: 45px;
-}
-
-.price .price-item .price-action .btn {
-    color: #ffffff;
-    background: #414141;
-    box-shadow: inset 0 0 0 50px #414141;
-}
-
-.price .price-item .price-action .btn:hover {
-    color: #414141;
-    background: transparent;
-    box-shadow: inset 0 0 0 0 #414141;
-    border-color: #414141;
-}
-
-.price .price-item.featured-item .price-action .btn {
-    color: #ffffff;
-    background: #EF233C;
-    box-shadow: inset 0 0 0 50px #EF233C;
-}
-
-.price .price-item.featured-item .price-action .btn:hover {
-    color: #EF233C;
-    background: transparent;
-    box-shadow: inset 0 0 0 0 #EF233C;
-    border-color: #EF233C;
+    background: #6f9bce;
 }
 
 
@@ -1130,500 +1076,148 @@ a:focus {
 /*********** Team CSS **********/
 /*******************************/
 .team {
-    position: relative;
-    width: 100%;
-    padding: 45px 0 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 60px 0;
+    background: #f0f4f8;
+}
+.team-item {
+    width: 350px; /* Fixed width */
+    height: 450px; /* Fixed height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    background: #fff;
+    padding-bottom: 20px;
+}
+
+.team-text {
+    padding: 20px;
+    flex: 1;
 }
 
 .team .team-item {
     position: relative;
-    background: #ffffff;
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    box-shadow: inset 0 0 0 0 transparent;
-    transition: ease-out 0.5s;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+.team .team-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
 .team .team-img {
-    position: relative;
-    width: 50%;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
 .team .team-img img {
-    position: relative;
     width: 100%;
-    transition: .5s;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
 }
 
-.team .team-text {
-    position: relative;
-    width: 50%;
-    padding: 0 30px;
-}
-
-.team .team-text h2 {
-    color: #EF233C;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 5px;
-    transition: 1s;
-}
-
-.team .team-text h4 {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    transition: 1s;
-}
-
-.team .team-text p {
-    margin-bottom: 20px;
-    transition: 1s;
-}
-
-.team .team-social {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.team .team-social a.btn {
-    width: 35px;
-    height: 35px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: normal;
-    margin-right: 5px;
-}
-
-.team .team-item:hover {
-    box-shadow: inset 800px 0 0 0 #EF233C;
-}
-
+/* Hover Effect - Slide Up Text Box */
 .team .team-item:hover .team-img img {
-    transform: scale(1.2);
-}
-
-.team .team-item:hover .team-text h2,
-.team .team-item:hover .team-text h4,
-.team .team-item:hover .team-text p {
-    color: #ffffff;
-}
-
-.team .team-item:hover .team-social a.btn {
-    background: #ffffff;
-}
-
-.team .team-item:hover .team-social a.btn:hover {
-    border-color: #ffffff;
-}
-
-@media(max-width: 575.98px) {
-    .team .team-text {
-        padding: 0 15px;
-    }
-
-    .team .team-text h2 {
-        font-size: 16px;
-        margin-bottom: 0;
-    }
-
-    .team .team-text h4 {
-        margin-bottom: 5px;
-    }
-
-    .team .team-text p {
-        font-size: 14px;
-        line-height: 18px;
-        margin-bottom: 10px;
-    }
-}
-
-
-/*******************************/
-/******* Testimonial CSS *******/
-/*******************************/
-.testimonial {
-    position: relative;
-    margin: 45px 0;
-    padding: 90px 0;
-    background: #EF233C;
-}
-
-.testimonial .container {
-    max-width: 900px;
-}
-
-.testimonial .testimonial-icon {
-    margin-bottom: 45px;
-    text-align: center;
-}
-
-.testimonial .testimonial-icon i {
-    font-size: 60px;
-    color: rgba(256, 256, 256, .5);
-}
-
-.testimonial .testimonial-item {
-    position: relative;
-    margin: 0 15px;
-    text-align: center;
-}
-
-.testimonial .testimonial-img {
-    position: relative;
-    margin-bottom: 15px;
-    z-index: 1;
-}
-
-.testimonial .testimonial-item img {
-    margin: 0 auto;
-    width: 120px;
-    padding: 10px;
-    border: 5px dotted #ffffff;
-    border-radius: 100px;
-}
-
-.testimonial .testimonial-text {
-    position: relative;
-    margin-top: -70px;
-    padding: 65px 35px 30px 35px;
-    text-align: center;
-    background: #ffffff;
-    border-radius: 500px;
-}
-
-.testimonial .testimonial-item p {
-    font-size: 18px;
-    font-style: italic;
-}
-
-.testimonial .testimonial-text h3 {
-    color: #EF233C;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.testimonial .testimonial-text h4 {
-    color: #666666;
-    font-size: 14px;
-    margin-bottom: 0;
-}
-
-.testimonial .owl-dots {
-    margin-top: 15px;
-    text-align: center;
-}
-
-.testimonial .owl-dot {
-    display: inline-block;
-    margin: 0 5px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(256, 256, 256, .5);
-}
-
-.testimonial .owl-dot.active {
-    background: #ffffff;
-}
-
-
-/*******************************/
-/********* Contact CSS *********/
-/*******************************/
-.contact {
-    position: relative;
-    width: 100%;
-    margin: 45px 0;
-    background: #EF233C;
-}
-
-.contact .container-fluid {
-    background: url(../img/contact.jpg) left center no-repeat;
-    background-size: contain;
-}
-
-.contact .contact-form {
-    position: relative;
-    padding: 90px 0 90px 45px;
-    background: #EF233C;
-}
-
-.contact .contact-form input {
-    color: #ffffff;
-    padding: 15px 0;
-    background: none;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(256, 256, 256, .5);
-}
-
-.contact .contact-form textarea {
-    color: #ffffff;
-    height: 90px;
-    padding: 15px 0;
-    background: none;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(256, 256, 256, .5);
-}
-
-.contact .contact-form .form-control::placeholder {
-    color: #ffffff;
-    opacity: 1;
-}
-
-.contact .contact-form .form-control:-ms-input-placeholder,
-.contact .contact-form .form-control::-ms-input-placeholder {
-    color: #ffffff;
-}
-
-.contact .contact-form .btn {
-    margin-top: 35px;
-    color: #EF233C;
-    background: #ffffff;
-    box-shadow: inset 0 0 0 50px #ffffff;
-}
-
-.contact .contact-form .btn:hover {
-    color: #ffffff;
-    background: transparent;
-    box-shadow: inset 0 0 0 0 #ffffff;
-    border-color: #ffffff;
-}
-
-.contact .help-block ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    font-size: 14px;
-    font-style: italic;
-    color: #ffffff;
-}
-
-@media (max-width: 767.98px) {
-    .contact .container-fluid {
-        background: none;
-    }
-
-    .contact .contact-form {
-        padding: 90px 0;
-    }
-}
-
-
-/*******************************/
-/*********** Blog CSS **********/
-/*******************************/
-.blog {
-    position: relative;
-    width: 100%;
-    padding: 45px 0 15px 0;
-}
-
-.blog .blog-item {
-    position: relative;
-    margin-bottom: 30px;
-}
-
-.blog .blog-img {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.blog .blog-img img {
-    width: 100%;
-    transition: .5s;
-}
-
-.blog .blog-item:hover img {
     transform: scale(1.1);
 }
 
-.blog .blog-text {
-    position: relative;
-    padding: 30px;
-    border-right: 1px solid rgba(0, 0, 0, .07);
-    border-bottom: 1px solid rgba(0, 0, 0, .07);
-    border-left: 1px solid rgba(0, 0, 0, .07);
+.team .team-text {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: #b0d4ff;
+    opacity: 0.9;
+    color: #0056b3;
+    border-radius: 0 0 15px 15px;
+    text-align: center;
+    padding: 20px;
+    transition: bottom 0.4s ease-in-out;
 }
 
-.blog .blog-text h2 {
-    font-size: 25px;
-    font-weight: 600;
+.team .team-item:hover .team-text {
+    bottom: 0;
+
 }
 
-.blog .blog-text p {
+.team .team-text h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.team .team-text h4 {
+    font-size: 16px;
+    font-weight: 500;
     margin-bottom: 10px;
 }
 
-.blog .blog-item a.btn {
-    margin-top: 10px;
-    padding: 8px 15px;
+.team .team-text p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
 }
 
-.blog .blog-item a.btn i {
-    margin-left: 5px;
-}
-
-.blog .blog-meta {
-    position: relative;
-    display: flex;
-    margin-bottom: 15px;
-}
-
-.blog .blog-meta p {
-    margin: 0 10px 0 0;
-    font-size: 13px;
-}
-
-.blog .blog-meta i {
-    color: #414141;
-    margin-right: 5px;
-}
-
-.blog .blog-meta p:last-child {
-    margin: 0;
-}
-
-
-/*******************************/
-/********* Footer CSS **********/
-/*******************************/
-.footer {
-    position: relative;
-    margin-top: 45px;
-    background: #EF233C;
-}
-
-.footer .container-fluid {
-    padding: 60px 0 0 0;
-}
-
-.footer .footer-info {
-    position: relative;
-    width: 100%;
-    text-align: center;
-}
-
-.footer .footer-info h2 {
-    margin-bottom: 20px;
-    font-size: 30px;
-    font-weight: 700;
-    color: #ffffff;
-}
-
-.footer .footer-info h3 {
-    margin-bottom: 25px;
-    font-size: 22px;
-    font-weight: 600;
-    color: #ffffff;
-}
-
-.footer .footer-menu {
-    width: 100%;
+/* Social Icons */
+.team .team-social {
     display: flex;
     justify-content: center;
+    gap: 12px; /* Slightly increased spacing for better alignment */
+    margin-top: 10px; /* Space above the icons */
 }
 
-.footer .footer-menu p {
-    color: #ffffff;
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 20px;
-    padding: 0 15px;
-    border-right: 1px solid #ffffff;
+.team .team-social a.btn {
+    width: 40px; /* Slightly larger for better visibility */
+    height: 40px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px; /* Increased for better readability */
+    color: #002555;
+    border: 1px solid #237bef;
+    transition: 0.3s ease-in-out;
 }
 
-.footer .footer-menu p:last-child {
-    border: none;
+.team .team-social a.btn:hover {
+    background: #ecd23e;
+    color: #130c0c;
+    border-color: #237bef;
+    transform: scale(1.1); /* Slight hover effect */
 }
 
-.footer .footer-social {
-    position: relative;
-    margin-top: 15px;
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .team {
+        justify-content: space-around;
+    }
 }
 
-.footer .footer-social a {
-    display: inline-block;
-}
-
-.footer .footer-social a i {
-    margin-right: 15px;
-    font-size: 20px;
-    color: #ffffff;
-    transition: .3s;
-}
-
-.footer .footer-social a:last-child i {
-    margin: 0;
-}
-
-.footer .footer-social a:hover i {
-    color: #414141;
-}
-
-.footer .copyright {
-    position: relative;
-    text-align: center;
-    margin-top: 30px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-}
-
-.footer .copyright::before {
-    position: absolute;
-    content: "";
-    width: 50%;
-    height: 1px;
-    top: 0;
-    left: 25%;
-    background: rgba(256, 256, 256, .2);
-}
-
-.footer .copyright p {
-    margin: 0;
-    color: #ffffff;
-}
-
-.footer .copyright .col-md-6:last-child p {
-    text-align: right;
-}
-
-.footer .copyright p a {
-    color: #ffffff;
-    font-weight: 600;
-}
-
-.footer .copyright p a:hover {
-    color: #414141;
-}
-
-@media (max-width: 575.98px) {
-    .footer .footer-info h2 {
-        margin-bottom: 20px;
-        font-size: 20px;
-        font-weight: 600;
+@media (max-width: 768px) {
+    .team {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .footer .footer-info h3 {
-        margin-bottom: 20px;
-        font-size: 16px;
-    }
-
-    .footer .footer-menu p {
-        font-size: 16px;
-        line-height: 16px;
-        padding: 0 5px;
+    .team .team-item {
+        width: 90%;
+        max-width: 350px;
     }
 }
