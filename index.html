@@ -50,8 +50,7 @@
                     <a href="#myskills" class="nav-item nav-link">My Skills</a>
                     <a href="#team" class="nav-item nav-link">Teams worked with</a>
                     <a href="#projects" class="nav-item nav-link">Projects</a>
-                    <a href="#social media pages" class="nav-item nav-link">Social media pages</a>
-                    <a href="#Gallery" class="nav-item nav-link">Gallery</a>
+
                 </div>
             </div>
         </div>
@@ -71,11 +70,36 @@
                             <h2></h2>
                             <div class="typed-text">Graphic Designer, MERN Full-Stack Developer, Apps Designer,flutter
                                 Apps Developer</div>
+                            <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
                         </div>
                         <div class="hero-btn">
-                            <a class="btn" href="https://wa.me/919342238517" target="_blank">Contact Me</a>
 
-                            <a class="btn" href="">Resume</a>
+
+                            <link rel="stylesheet"
+                                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+                            <!-- Social Media Buttons -->
+                            <!-- Font Awesome CDN (Add in <head> if not included already) -->
+                            <link rel="stylesheet"
+                                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+                            <!-- WhatsApp Button -->
+                            <a class="btn social-btn whatsapp-btn" href="https://wa.me/919342238517" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a class="btn social-btn" href="https://www.linkedin.com/in/rampavithran-rp/"
+                                target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+
+                            <a class="btn social-btn" href="https://www.instagram.com/ram._______.03/" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a class="btn social-btn" href="https://github.com/RAMPAVITHRAN23" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -99,7 +123,7 @@
 
                 <div class="col-lg-6">
                     <div class="about-img">
-                        <img src="img/about.jpg" alt="Image">
+                        <img src="img/WhatsApp Image 2024-10-09 at 22.32.47_51b96d59.jpg" alt="Image">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -108,6 +132,12 @@
                             <p>About Me</p>
                             <h2>Final Year student</h2>
                             <h6>B.Tech - IT At Sri Sairam Engineering College</h6>
+                            <h6>
+                                Co Lead
+                                IEEE CS SYP Awards Engagement Program</h6>
+                            <h6>Chairperson of Sairam IEEE Student Branch & SEC IEEE CS SBC , Execom of IEEE MAS SAC
+                            </h6>
+                            <h6>Sairam NSS Co-ordinator</h6>
                         </div>
                         <div class="about-text">
                             <p>
@@ -312,7 +342,7 @@
                             </div>
                         </div>
 
-                        <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+                        <!-- <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
                             <div class="timeline-text">
                                 <div class="timeline-date">2045 - 2050</div>
                                 <h2>Web Developer</h2>
@@ -322,7 +352,7 @@
                                     blandit semper pretium.
                                 </p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -394,19 +424,20 @@
             </style>
             <!-- Banner End -->
 
-            <!-- Portfolio Section Start -->
-            <div>
+            <!-- Portfolio Section Start  -->
+            <!-- <div>
                 <div class="portfolio" id="portfolio">
                     <div class="container">
                         <div class="section-header text-center">
                             <p>My Portfolio</p>
                             <h2>My Excellent Portfolio</h2>
                         </div>
-            
-                        <!-- Filter Buttons -->
+
+                        Filter Buttons 
                         <div class="row">
                             <div class="col-12 text-center">
-                                <ul id="portfolio-filter" style="padding: 0; margin: -15px 0 25px 0; list-style: none; font-size: 0; text-align: center;">
+                                <ul id="portfolio-filter"
+                                    style="padding: 0; margin: -15px 0 25px 0; list-style: none; font-size: 0; text-align: center;">
                                     <li class="filter-active" onclick="filterSelection('all', event)">All</li>
                                     <li onclick="filterSelection('filter-1', event)">Web Design</li>
                                     <li onclick="filterSelection('filter-2', event)">Mobile Apps</li>
@@ -414,8 +445,8 @@
                                 </ul>
                             </div>
                         </div>
-            
-                        <!-- Portfolio Items (3 Cards Per Row) -->
+
+                        Portfolio Items (3 Cards Per Row) 
                         <div class="portfolio-container">
                             <div class="portfolio-item filter-1">
                                 <div class="portfolio-wrap">
@@ -433,7 +464,7 @@
                                     <div class="portfolio-img">
                                         <img src="img/portfolio-2.jpg" alt="Landing Page">
                                         <div class="overlay">
-                                            <h4>Landing Page</h4>
+                                            <h3>Landing Page</h3>
                                             <a href="details.html" class="btn">View Details</a>
                                         </div>
                                     </div>
@@ -451,16 +482,16 @@
                                 </div>
                             </div>
                         </div>
-            
-                        <!-- Filtering Script -->
+
+                        Filtering Script 
                         <script>
                             function filterSelection(category, event) {
                                 let items = document.getElementsByClassName("portfolio-item");
                                 let buttons = document.querySelectorAll("#portfolio-filter li");
-            
+
                                 buttons.forEach(btn => btn.classList.remove("filter-active"));
                                 event.target.classList.add("filter-active");
-            
+
                                 for (let i = 0; i < items.length; i++) {
                                     if (category === "all") {
                                         items[i].style.display = "block";
@@ -471,12 +502,12 @@
                                     }
                                 }
                             }
-            
+
                             // Show all items on page load
                             document.addEventListener("DOMContentLoaded", () => filterSelection("all", { target: document.querySelector(".filter-active") }));
                         </script>
-            
-                        <!-- Updated CSS -->
+
+                        Updated CSS 
                         <style>
                             .portfolio-container {
                                 display: flex;
@@ -484,26 +515,27 @@
                                 gap: 20px;
                                 justify-content: center;
                             }
-            
+
                             .portfolio-item {
-                                width: calc(33.33% - 30px); /* 3 items per row */
+                                width: calc(33.33% - 30px);
+                                /* 3 items per row */
                                 padding: 15px;
                                 display: block;
                                 box-sizing: border-box;
                             }
-            
+
                             .portfolio-wrap {
                                 background: #fff;
                                 border-radius: 10px;
                                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                                 overflow: hidden;
                             }
-            
+
                             .portfolio {
                                 position: relative;
                                 padding: 45px 0 15px 0;
                             }
-            
+
                             .portfolio #portfolio-filter {
                                 padding: 0;
                                 margin: -15px 0 25px 0;
@@ -511,7 +543,7 @@
                                 font-size: 0;
                                 text-align: center;
                             }
-            
+
                             .portfolio #portfolio-filter li {
                                 cursor: pointer;
                                 display: inline-block;
@@ -525,7 +557,7 @@
                                 box-shadow: inset 0 0 0 50px #83b0da;
                                 transition: ease-out 0.3s;
                             }
-            
+
                             .portfolio #portfolio-filter li:hover,
                             .portfolio #portfolio-filter li.filter-active {
                                 color: #ef233c;
@@ -533,21 +565,21 @@
                                 box-shadow: inset 0 0 0 0 #ef233c;
                                 border-color: #d1cece;
                             }
-            
+
                             .portfolio .portfolio-item {
                                 position: relative;
                             }
-            
+
                             .portfolio .portfolio-wrap {
                                 position: relative;
                                 width: 100%;
                             }
-            
+
                             .portfolio .portfolio-img {
                                 position: relative;
                                 overflow: hidden;
                             }
-            
+
                             .portfolio .portfolio-img img {
                                 position: relative;
                                 width: 100%;
@@ -556,11 +588,11 @@
                                 transform: scale(1.1);
                                 transition: 0.5s;
                             }
-            
+
                             .portfolio .portfolio-item:hover img {
                                 margin-left: 15px;
                             }
-            
+
                             .portfolio .portfolio-text {
                                 position: relative;
                                 height: 60px;
@@ -571,7 +603,7 @@
                                 background: #ffffff;
                                 box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
                             }
-            
+
                             .portfolio .portfolio-text h3 {
                                 width: calc(100% - 70px);
                                 font-size: 18px;
@@ -580,7 +612,7 @@
                                 white-space: nowrap;
                                 overflow: hidden;
                             }
-            
+
                             .portfolio .portfolio-text a.btn {
                                 width: 50px;
                                 height: 50px;
@@ -591,33 +623,34 @@
                                 font-size: 45px;
                                 font-weight: 100;
                             }
-            
+
                             .portfolio .portfolio-item:hover a.btn {
                                 color: #ff7b00;
                                 background: transparent;
                                 box-shadow: inset 0 0 0 0 #B0D4FF;
                                 border-color: #717de4;
                             }
-            
+
                             /* Responsive Design */
                             @media (max-width: 991px) {
                                 .portfolio-item {
-                                    width: calc(50% - 20px); /* 2 items per row */
+                                    width: calc(50% - 20px);
+                                    /* 2 items per row */
                                 }
                             }
-            
+
                             @media (max-width: 768px) {
                                 .portfolio-item {
-                                    width: 100%; /* 1 item per row */
+                                    width: 100%;
+                                    /* 1 item per row */
                                 }
                             }
                         </style>
                     </div>
                 </div>
-            </div>
+            </div> -->
+            <!-- Portfolio Section End -->
 
-
-            
             <!-- Team Start -->
             <div class="team" id="team">
                 <div class="container">
@@ -711,7 +744,6 @@
             </div>
             <!-- Team End -->
 
-
             <!-- Projects Section Start -->
             <div class="container" id="projects"
                 style="padding: 80px 10px; background-color: #f8f9fa; text-align: center;">
@@ -766,8 +798,8 @@
 
                     <!-- Project 3 -->
                     <div class="project-card" , style="animation: fadeInup 1s;">
-                        <div style="overflow: hidden;border-radius: 12px 12px 0 0;"><img src="img/food store.jpeg"
-                                alt="Food Store"
+                        <div style="overflow: hidden;border-radius: 12px 12px 0 0;"><img
+                                src="img/Screenshot 2025-02-26 115813.png" alt="Food Store"
                                 style="width: 100%; height: 220px; object-fit: cover; transition: transform 0.4s;">
                             <div style="padding: 20px;">
                                 <h3 style="font-size: 22px; font-weight: 600; color: #333333; margin-bottom: 10px;">
@@ -947,6 +979,8 @@
             <script src="lib/easing/easing.min.js"></script>
             <script src="lib/wow/wow.min.js"></script>
             <script src="lib/waypoints/waypoints.min.js"></script>
+            <script src="lib/typed/typed.min.js"></script>
+            <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
             <script src="lib/owlcarousel/owl.carousel.min.js"></script>
             <script src="lib/isotope/isotope.pkgd.min.js"></script>
